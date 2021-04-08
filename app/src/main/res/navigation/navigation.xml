@@ -3,11 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation.xml"
-    app:startDestination="@id/homeFragment">
+    app:startDestination="@id/cadastraFragment">
 
     <fragment
         tools:layout="@layout/fragment_home"
         android:id="@+id/homeFragment"
         android:name="com.example.segundaprova.fragments.HomeFragment"
         android:label="HomeFragment" />
+    <fragment
+        tools:layout="@layout/fragment_cadastra"
+        android:id="@+id/cadastraFragment"
+        android:name="com.example.segundaprova.fragments.CadastraFragment"
+        android:label="CadastraFragment" />
 </navigation>

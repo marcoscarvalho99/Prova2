@@ -17,17 +17,11 @@ import com.example.segundaprova.reciclerView.AlunoAdapter
 
 class HomeFragment : Fragment() {
 
-//    val db: AppDatabase by lazy {
-//        Room.databaseBuilder(
-//            activity!!.applicationContext,
-//            AppDatabase::class.java, "database-name")
-//            .allowMainThreadQueries()
-//            .build()
-//
-//    }
+
 
 
     lateinit var binding: FragmentHomeBinding
+
 
     lateinit var viewmodel:HomeFragmentViewModel
     override fun onCreateView(
@@ -35,19 +29,13 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
             ): View? {
 
-       // var aluno = Aluno(0,"marcos","sergio",1,2,3,234)
-        //db.alunoDao().inserir(aluno)
+
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home,container,false )
 
         viewmodel = ViewModelProvider(this).get(HomeFragmentViewModel::class.java)
 
-        //fragment = HomeFragmentViewModel(activity!!.application)
-       // var listaAlunos:List<Aluno> = fragment.list
 
-        //var listaAlunos:List<Aluno> = viewmodel.alunos as List<Aluno>
-
-       // var listaAlunos:LiveData<List<Aluno>> = db.alunoDao().listAll()
 
 
         var adapter= AlunoAdapter()

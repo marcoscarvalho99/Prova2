@@ -16,8 +16,7 @@ class AlunoAdapter : RecyclerView.Adapter<AlunoViewHolde>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): AlunoViewHolde {
 
         var v = LayoutInflater.from(parent.context).inflate(R.layout.aluno_inflater,parent,false);
-//        var alunos:List<Aluno> = ArrayList()
-//        val holder =AlunoViewHolde(v)
+
         return  AlunoViewHolde(v)
     }
 
