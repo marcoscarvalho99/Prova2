@@ -42,8 +42,7 @@ class CadastraFragmentViewModel(application: Application) : AndroidViewModel(app
         }catch (e:Exception){
 
         }
-
-
+        
     }
 
     }

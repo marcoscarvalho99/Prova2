@@ -3,16 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation.xml"
-    app:startDestination="@id/cadastraFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
         tools:layout="@layout/fragment_home"
         android:id="@+id/homeFragment"
         android:name="com.example.segundaprova.fragments.HomeFragment"
-        android:label="HomeFragment" />
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_alteraFragment"
+            app:destination="@id/alteraFragment" />
+    </fragment>
     <fragment
         tools:layout="@layout/fragment_cadastra"
         android:id="@+id/cadastraFragment"
         android:name="com.example.segundaprova.fragments.CadastraFragment"
         android:label="CadastraFragment" />
+    <fragment
+        android:id="@+id/alteraFragment"
+        tools:layout="@layout/fragment_altera"
+        android:name="com.example.segundaprova.fragments.AlteraFragment"
+        android:label="AlteraFragment" >
+        <argument
+            android:name="IdAluno"
+            app:argType="integer" />
+    </fragment>
 </navigation>
