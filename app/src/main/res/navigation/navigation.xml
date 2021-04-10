@@ -27,5 +27,10 @@
         <argument
             android:name="IdAluno"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_alteraFragment_to_homeFragment2"
+            app:destination="@id/homeFragment"
+            app:launchSingleTop="false"
+            app:popUpTo="@id/alteraFragment" />
     </fragment>
 </navigation>

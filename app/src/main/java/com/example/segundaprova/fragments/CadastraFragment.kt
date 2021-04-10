@@ -34,7 +34,7 @@ lateinit var viewModel: CadastraFragmentViewModel
         binding.lifecycleOwner
         binding.viewModelCadastrar = viewModel
 
-        binding.buttonCadastrar.setOnClickListener {
+        binding.buttonEditar.setOnClickListener {
 
             if(binding.editTextNome.text.toString() == "" || binding.editTextSobrenome.text.toString() == ""
                 || binding.editTextNota1.text.toString() == "" || binding.editTextNota2.text.toString() == ""
