@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_homeFragment_to_alteraFragment"
             app:destination="@id/alteraFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_detalhesFragment"
+            app:destination="@id/detalhesFragment" />
     </fragment>
     <fragment
         tools:layout="@layout/fragment_cadastra"
@@ -32,5 +35,14 @@
             app:destination="@id/homeFragment"
             app:launchSingleTop="false"
             app:popUpTo="@id/alteraFragment" />
+    </fragment>
+    <fragment
+        tools:layout="@layout/fragment_detalhes"
+        android:id="@+id/detalhesFragment"
+        android:name="com.example.segundaprova.fragments.DetalhesFragment"
+        android:label="DetalhesFragment" >
+        <argument
+            android:name="idAluno"
+            app:argType="integer" />
     </fragment>
 </navigation>

@@ -60,12 +60,14 @@ class HomeFragment : Fragment() {
 
                 override fun onItemClick(view: View, position: Int) {
                     Log.i("Teste", "onSingleTapUp ")
+                    Navigation.findNavController(requireView()).navigate(HomeFragmentDirections.actionHomeFragmentToDetalhesFragment(position+1))
 
-                    Navigation.findNavController(requireView()).navigate(HomeFragmentDirections.actionHomeFragmentToAlteraFragment(position+1))
 
                 }
 
                 override fun onItemLongClick(view: View, position: Int) {
+
+                    Navigation.findNavController(requireView()).navigate(HomeFragmentDirections.actionHomeFragmentToAlteraFragment(position+1))
 
                 }
 
