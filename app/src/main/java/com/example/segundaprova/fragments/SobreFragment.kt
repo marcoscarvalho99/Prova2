@@ -19,8 +19,9 @@ lateinit var binding: FragmentSobreBinding
         savedInstanceState: Bundle?
     ): View? {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_sobre,container,false )
+        var texto = R.string.desenvolvedor
 
-
+        binding.textViewDesenvolvedor.text= getString(texto)
        
         return binding.root
     }

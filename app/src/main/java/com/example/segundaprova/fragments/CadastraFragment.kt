@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
 import androidx.room.Room
@@ -46,6 +47,8 @@ lateinit var viewModel: CadastraFragmentViewModel
             else{
 
                viewModel.cadastrar()
+                Navigation.findNavController(requireView())
+                    .navigate(CadastraFragmentDirections.actionCadastraFragmentToHomeFragment())
 
             }
         }

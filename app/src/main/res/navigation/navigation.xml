@@ -21,7 +21,11 @@
         tools:layout="@layout/fragment_cadastra"
         android:id="@+id/cadastraFragment"
         android:name="com.example.segundaprova.fragments.CadastraFragment"
-        android:label="CadastraFragment" />
+        android:label="CadastraFragment" >
+        <action
+            android:id="@+id/action_cadastraFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
     <fragment
         android:id="@+id/alteraFragment"
         tools:layout="@layout/fragment_altera"
