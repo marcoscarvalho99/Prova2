@@ -10,4 +10,14 @@
     <string name="nota3">Nota 3:</string>
     <string name="matricula">Matricula :</string>
     <string name="Editar">Editar</string>
+    <string name="sobreFragment">sobreFragment</string>
+    <string name="HomeAjuda">Home Ajuda</string>
+    <string name="HomeAjudaValue">Nesta tela você pode clicar, long click e visualizar essas informações alem de ter um menu.</string>
+    <string name="Altera">Alterar Dados</string>
+    <string name="Alterardadosvalue">você pode alterar os dados clicando no botão</string>
+    <string name="DetalhesAjuda">DetalhesAjuda</string>
+    <string name="delalhesvalue">Nesta tela voçe pode ver os detalhes do objeto selecionado</string>
+    <string name="CadastraAjuda">Cadastra Ajuda</string>
+    <string name="cadvalue">Nesta tela você pode cadastrar um novo aluno</string>
+    <string name="desenvolvedor">Desenvolvedor: Marcos Sergio de Oliveira Carvalho Junior</string>
 </resources>

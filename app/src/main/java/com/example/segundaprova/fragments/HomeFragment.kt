@@ -3,19 +3,18 @@ package com.example.segundaprova.fragments
 
 import android.os.Bundle
 import android.util.Log
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.NavigationUI
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.segundaprova.MainActivity
 import com.example.segundaprova.R
 import com.example.segundaprova.databinding.FragmentHomeBinding
+import com.example.segundaprova.dialogFragment.DialogTeste
 import com.example.segundaprova.reciclerView.AlunoAdapter
 import com.example.segundaprova.reciclerView.NovoRecicleViewClickListener
 
@@ -76,9 +75,36 @@ class HomeFragment : Fragment() {
         )
         )
 
-
+        setHasOptionsMenu(true)
 
         return binding.root
     }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.options_menu,menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+
+//when(item.itemId){
+//    R.id.ajuda ->{
+//
+//    }
+//
+//}
+
+      if(item.itemId == R.id.ajuda){
+
+          var dialog =
+              DialogTeste(R.layout.home_dialog)
+          dialog.show(requireActivity().supportFragmentManager, "home ajuda")
+
+      }
+        return NavigationUI.onNavDestinationSelected(item,this.findNavController()) || super.onOptionsItemSelected(item)
+
+
+    }
+
 
 }
